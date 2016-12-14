@@ -12,5 +12,12 @@
 
     <groupId>org.gid.aut</groupId>
     <artifactId>models</artifactId>
-    
+
+    <dependencies>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+    </dependencies>
 </project>

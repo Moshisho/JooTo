@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Designer Base Test">
+
+    <parameter name="browser.name" value="FIREFOX"/>
+
+    <test name="Small Wikipedia Tests">
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="Regression"/>-->
+                <!--<include name="Beta"/>-->
+            <!--</run>-->
+        <!--</groups>-->
+        <classes>
+            <class name="org.gid.aut.tests.small.WikipediaTests" />
+        </classes>
+    </test>
+
+</suite>
