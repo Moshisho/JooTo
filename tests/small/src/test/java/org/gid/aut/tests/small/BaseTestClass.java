@@ -9,21 +9,23 @@ import org.testng.annotations.Parameters;
 public abstract class BaseTestClass {
 
     protected WebDriver driver;
+    private SeleniumHelper helper = new SeleniumHelper();
 
     public WebDriver getDriver(){
         return driver;
     }
 
     public void setUpDriver(String browserName, String appURL){
-        driver = SeleniumHelper.openBrowser(browserName);
+        driver = helper.openBrowser(browserName);
         driver.manage().window().maximize();
         driver.navigate().to(appURL);
     }
 
+    //this is called before the beforeclass of the test itself.
     @Parameters({ "app.url", "browser.name" })
     @BeforeClass
     public void initializeTestBaseSetup(String appURL, String browserName) {
-        System.out.println("Mi URL:"+ appURL);
+        System.out.println("My URL:"+ appURL);
         try {
             setUpDriver(browserName, appURL);
 

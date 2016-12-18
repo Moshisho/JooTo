@@ -6,11 +6,13 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class SeleniumHelper extends Helper{
 
-    public static WebDriver openBrowser(String browserName) {
+    private String chromeDriverExePath = this.getClass().getClassLoader().getResource("chromedriver.exe").getPath();
+
+    public WebDriver openBrowser(String browserName) {
 
         if (isDebug() || !System.getProperty("user.name").toLowerCase().contains("cam_oo_auto")) {
             System.setProperty("browser.downloads.folder.path", "C:\\Users\\azariam\\Downloads");
-            System.setProperty("chromeDriverPath", "C:\\_Dev\\webdrivers");
+            System.setProperty("webdriver.chrome.driver", chromeDriverExePath);
             System.setProperty("ui.actions.timeout", "4");
         } else {
             System.setProperty("browser.downloads.folder.path", "C:\\Users\\CAM_OO_Auto\\Downloads");
@@ -25,8 +27,7 @@ public class SeleniumHelper extends Helper{
 
         switch (browserName.toUpperCase()){
             case "CHROME":
-//                return new ChromeDriver();
-                break;
+                return new ChromeDriver();
             case "FIREFOX":
 
                 break;

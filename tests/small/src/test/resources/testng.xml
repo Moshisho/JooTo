@@ -2,7 +2,8 @@
 
 <suite name="Designer Base Test">
 
-    <parameter name="browser.name" value="FIREFOX"/>
+    <parameter name="browser.name" value="CHROME"/>
+    <parameter name="app.url" value="https://wikipedia.org"/>
 
     <test name="Small Wikipedia Tests">
         <!--<groups>-->
