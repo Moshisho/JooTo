@@ -1,12 +1,16 @@
 package org.gid.aut.commons.tests;
 
 
-import org.gid.aut.common.api.Mailer;
+import org.gid.aut.common.impl.Mailer;
 import org.gid.aut.common.impl.OSUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class CommonsTests {
+
+    private final static Logger log = LoggerFactory.getLogger(CommonsTests.class);
 
     @Test(groups = "mailer")
     public static void testMailer() {
@@ -28,5 +32,11 @@ public class CommonsTests {
     @Test(groups = "os")
     public void testOSArchitecture(){
         Assert.assertTrue(OSUtils.is64Architecture());
+    }
+
+    @Test(groups = "logger")
+    public void testLogger(){
+        log.error("error!!!!");
+        log.debug("FORMAT {}", 46);
     }
 }

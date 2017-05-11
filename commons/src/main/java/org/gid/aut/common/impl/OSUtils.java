@@ -20,7 +20,7 @@ public final class OSUtils {
     public static String getUserName(){
         return System.getProperty("user.name");
     }
-    
+
     public enum OSType {
         Windows, MacOS, Linux, Other
     }

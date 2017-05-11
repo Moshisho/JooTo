@@ -1,4 +1,7 @@
-package org.gid.aut.common.api;
+package org.gid.aut.common.impl;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -9,11 +12,13 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
-public interface Mailer {
+public final class Mailer {
 
-    final String USER_NAME = "miron.jengo";
-    final String PASSWORD = "po09!@QW";
-    final String DEFAULT_RECIPIENT = "moshisho84@gmail.com";
+    final static Logger log = LoggerFactory.getLogger(Mailer.class);
+
+    public final static String USER_NAME = "miron.jengo";
+    public final static String PASSWORD = "po09!@QW";
+    public final static String DEFAULT_RECIPIENT = "moshisho84@gmail.com";
 
     public static void sendFromGMail(String from, String pass, String[] to, String subject, String body) {
         final String host = "smtp.gmail.com";
@@ -33,7 +38,6 @@ public interface Mailer {
             message.setFrom(new InternetAddress(from));
             InternetAddress[] toAddress = new InternetAddress[to.length];
 
-            // To get the array of addresses
             for( int i = 0; i < to.length; i++ ) {
                 toAddress[i] = new InternetAddress(to[i]);
             }
@@ -50,10 +54,10 @@ public interface Mailer {
             transport.close();
         }
         catch (AddressException ae) {
-            ae.printStackTrace();
+            log.error(ae.toString(), ae);
         }
         catch (MessagingException me) {
-            me.printStackTrace();
+            log.error(me.toString(), me);
         }
     }
 }

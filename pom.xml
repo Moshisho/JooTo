@@ -48,7 +48,11 @@
                 <artifactId>mail</artifactId>
                 <version>${java.mail.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -64,6 +68,10 @@
                     </suiteXmlFiles>
                     <systemProperties>
                     </systemProperties>
+                    <systemPropertyVariables>
+                        <log4j.debug>true</log4j.debug>
+                        <!--<log4j.configuration>${basedir}/log4j.properties</log4j.configuration>-->
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
