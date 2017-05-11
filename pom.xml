@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.gid.aut</groupId>
-    <artifactId>dockerized-se-ci-cycle</artifactId>
+    <artifactId>jooto</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
