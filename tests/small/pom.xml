@@ -13,6 +13,11 @@
     <groupId>org.gid.aut</groupId>
     <artifactId>small</artifactId>
     
-
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+        </dependency>
+    </dependencies>
     
 </project>

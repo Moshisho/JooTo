@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="mailer">
+    <test name="mailer-sanity">
+        <classes>
+            <class name="org.gid.aut.commons.tests.CommonsTests">
+                <methods>
+                    <exclude name="testMailer"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
