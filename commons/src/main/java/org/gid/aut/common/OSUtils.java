@@ -1,4 +1,4 @@
-package org.gid.aut.common.impl;
+package org.gid.aut.common;
 
 import java.util.Locale;
 

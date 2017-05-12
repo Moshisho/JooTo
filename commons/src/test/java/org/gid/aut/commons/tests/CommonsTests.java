@@ -1,8 +1,8 @@
 package org.gid.aut.commons.tests;
 
 
-import org.gid.aut.common.impl.Mailer;
-import org.gid.aut.common.impl.OSUtils;
+import org.gid.aut.common.Mailer;
+import org.gid.aut.common.OSUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
