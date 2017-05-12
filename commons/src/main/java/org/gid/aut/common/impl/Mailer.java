@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public final class Mailer {
 
-    final static Logger log = LoggerFactory.getLogger(Mailer.class);
+    private final static Logger log = LoggerFactory.getLogger(Mailer.class);
 
     public final static String USER_NAME = "miron.jengo";
     public final static String PASSWORD = "po09!@QW";

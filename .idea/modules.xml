@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/commons/commons.iml" filepath="$PROJECT_DIR$/commons/commons.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/dockerized-se-ci-cycle.iml" filepath="$PROJECT_DIR$/.idea/dockerized-se-ci-cycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/frameworks/frameworks.iml" filepath="$PROJECT_DIR$/frameworks/frameworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/jooto.iml" filepath="$PROJECT_DIR$/.idea/jooto.iml" />
       <module fileurl="file://$PROJECT_DIR$/models/models.iml" filepath="$PROJECT_DIR$/models/models.iml" />
       <module fileurl="file://$PROJECT_DIR$/frameworks/se-wrap/se-wrap.iml" filepath="$PROJECT_DIR$/frameworks/se-wrap/se-wrap.iml" />
       <module fileurl="file://$PROJECT_DIR$/tests/small/small.iml" filepath="$PROJECT_DIR$/tests/small/small.iml" />
