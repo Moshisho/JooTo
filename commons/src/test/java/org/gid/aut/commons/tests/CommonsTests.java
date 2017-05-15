@@ -3,6 +3,7 @@ package org.gid.aut.commons.tests;
 
 import org.gid.aut.common.Mailer;
 import org.gid.aut.common.OSUtils;
+import org.gid.aut.common.ProcessesUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -38,5 +39,10 @@ public class CommonsTests {
     public void testLogger(){
         log.error("error!!!!");
         log.debug("FORMAT {}", 46);
+    }
+
+    @Test(groups = "process")
+    public void testProcessList() {
+        Assert.assertTrue(!ProcessesUtils.getRunningProcesses().isEmpty());
     }
 }
